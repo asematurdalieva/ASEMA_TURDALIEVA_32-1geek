@@ -1,0 +1,25 @@
+{% extends 'layouts/index.html' %}
+
+{% block content %}
+    <style type="text/css">
+        .info {
+            width: 80%;
+            margin-top: 20px;
+            margin-left: 10%;
+        }
+        .dates {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+    <div class="info">
+        <img src="/media/{{ product.preview }}/" alt="" width="100%">
+        <h1>{{ product.title }} price: {{ product.price }}</h1>
+        <h5>{{ product.description }}</h5>
+        <div class="dates">
+            <h5>{{ product.created_date }}</h5>
+            <h5>{{ product.modified_date }}</h5>
+        </div>
+    </div>
+{% endblock %}
